@@ -284,3 +284,46 @@ CMD ["node", "index.js"]
 ```bash
 cd ..
 ```
+
+7. Commit changes to Git:
+```bash
+git add .
+git commit -m "Added microservices implementations and Dockerfiles"
+```
+
+
+## Task 5: Push to Docker Hub
+
+1.Log in to Docker Hub via terminal (replace with your credentials):
+
+```bash
+docker login
+```
+
+2. Build and push each image (replace yourusername with your Docker Hub username, and tag with v1 for version):
+
+- Product:
+```bash
+cd product-service
+docker build -t yourusername/product-service:v1 .
+docker push yourusername/product-service:v1
+cd ..
+```
+
+## Cart:
+```bash
+cd cart-service
+docker build -t yourusername/cart-service:v1 .
+docker push yourusername/cart-service:v1
+cd ..
+```
+
+## Order:
+```bash
+cd order-service
+docker build -t yourusername/order-service:v1 .
+docker push yourusername/order-service:v1
+cd ..
+```
+
+## Commit any changes:
