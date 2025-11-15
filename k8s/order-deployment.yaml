@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: joanna/order-service:v1
+        image: joanna2/order-service:v1
         ports:
         - containerPort: 3002
