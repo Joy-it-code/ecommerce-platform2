@@ -708,6 +708,18 @@ helm list -n monitoringhelm list -n monitoring
 ![](./img/7d.monitoring.png)
 
 
+### Clean Up
+```bash
+minikube stop && minikube delete --all --purge && docker system prune -af
+```
+
+
+### Verify Clean Up
+```bash
+minikube status
+docker ps -a
+kubectl get all --all-namespaces
+```
 
 
 ## Features Implemented
